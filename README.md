@@ -1,5 +1,22 @@
 # GPT-2 From Scratch using PyTorch
 
+# Google Colab
+
+🔗 https://drive.google.com/file/d/1KL7_-vYZteOdMCVPxRnUX6w0VvFFqXjK/view?usp=drive_link
+
+---
+
+# Handwritten Report
+
+📄 https://drive.google.com/file/d/1OQizhFmI2bGIE3gilSKQbb6h5J67XlgM/view?usp=drive_link
+---
+
+# Trained Model
+
+📦 https://drive.google.com/file/d/1ScCcjXMtQ3ATRO6C_gRb3Hxg-tziGfxd/view?usp=drive_link
+
+---
+
 ## Introduction
 
 This project implements a GPT-2 style language model completely from scratch using PyTorch.
@@ -36,24 +53,6 @@ The GIF demonstrates autoregressive text generation where the model predicts one
 
 ---
 
-# Google Colab
-
-🔗 PASTE_COLAB_LINK
-
----
-
-# Handwritten Report
-
-📄 PASTE_HANDWRITTEN_REPORT_LINK
-
----
-
-# Trained Model
-
-📦 PASTE_MODEL_LINK
-
----
-
 # Theory
 
 # Dataset and Preprocessing
@@ -68,7 +67,7 @@ Preprocessing steps:
 - Clean text formatting
 - Convert text into token sequences
 
-The cleaned text corpus is then used to train the GPT model. :contentReference[oaicite:1]{index=1}
+The cleaned text corpus is then used to train the GPT model.
 
 ---
 
@@ -101,7 +100,7 @@ Advantages:
 - Better generalization
 - Efficient tokenization
 
-The GPT-2 tokenizer contains approximately 50,257 tokens. :contentReference[oaicite:2]{index=2}
+The GPT-2 tokenizer contains approximately 50,257 tokens. 
 
 ---
 
@@ -111,7 +110,7 @@ GPT-2 is a Decoder-Only Transformer.
 
 Unlike encoder-decoder architectures, GPT only uses transformer decoder blocks.
 
-A causal attention mask ensures that future tokens are hidden from the current token. :contentReference[oaicite:3]{index=3}
+A causal attention mask ensures that future tokens are hidden from the current token.
 
 ---
 
@@ -127,8 +126,6 @@ A causal attention mask ensures that future tokens are hidden from the current t
 | Learning Rate | 3e-4 |
 | Batch Size | 128 |
 | Epochs | 10 |
-
-:contentReference[oaicite:4]{index=4}
 
 ---
 
@@ -172,8 +169,7 @@ After embedding:
 [B, 256, 512]
 ```
 
-The embedding matrix maps token IDs into dense vector representations. :contentReference[oaicite:5]{index=5}
-
+The embedding matrix maps token IDs into dense vector representations. 
 ---
 
 # Positional Embedding
@@ -192,8 +188,6 @@ After adding token embeddings and positional embeddings:
 [B,256,512]
 ```
 
-:contentReference[oaicite:6]{index=6}
-
 ---
 
 # Layer Normalization
@@ -207,7 +201,7 @@ For each token:
 3. Normalize activations
 4. Apply learnable scale and bias
 
-This improves training stability and convergence. :contentReference[oaicite:7]{index=7}
+This improves training stability and convergence.
 
 ---
 
@@ -234,7 +228,7 @@ Attention(Q,K,V)
 Softmax(QKᵀ / √dk)V
 ```
 
-A causal mask is applied before softmax so future tokens remain inaccessible to the current token. :contentReference[oaicite:8]{index=8}
+A causal mask is applied before softmax so future tokens remain inaccessible to the current token.
 
 ---
 
@@ -252,7 +246,7 @@ Activation:
 GELU
 ```
 
-The feed-forward network enables non-linear transformations of token representations. :contentReference[oaicite:9]{index=9}
+The feed-forward network enables non-linear transformations of token representations. 
 
 ---
 
@@ -270,7 +264,7 @@ Output:
 [B,256,50257]
 ```
 
-representing probabilities for every vocabulary token. :contentReference[oaicite:10]{index=10}
+representing probabilities for every vocabulary token.
 
 ---
 
@@ -282,8 +276,7 @@ Cross Entropy Loss is used during training.
 Loss = -Σ yi log(ŷi)
 ```
 
-The model learns to predict the next token given all previous tokens. :contentReference[oaicite:11]{index=11}
-
+The model learns to predict the next token given all previous tokens.
 ---
 
 # Inference and Text Generation
@@ -297,7 +290,7 @@ During inference:
 5. The generated token is appended to the sequence.
 6. Repeat until the context limit is reached.
 
-This process produces autoregressive text generation. :contentReference[oaicite:12]{index=12}
+This process produces autoregressive text generation. 
 
 ---
 
@@ -318,7 +311,6 @@ Temperature = 1.5
 → More diverse generations
 ```
 
-:contentReference[oaicite:13]{index=13}
 
 ---
 
@@ -336,7 +328,7 @@ All other tokens are masked out.
 
 Sampling is then performed only among the top-K candidates.
 
-This improves generation quality and reduces garbage outputs. :contentReference[oaicite:14]{index=14}
+This improves generation quality and reduces garbage outputs.
 
 ---
 
