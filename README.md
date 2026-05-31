@@ -47,7 +47,11 @@ The project covers:
 ## Text Generation
 
 <p align="center">
-  <img src="assets/gpt2_generation.gif" width="900">
+  <img src="results/step_1.gif" width="600">
+</p>
+
+<p align="center">
+  <img src="results/step_2.gif" width="600">
 </p>
 
 The GIF demonstrates autoregressive text generation where the model predicts one token at a time and appends it back to the sequence until the desired context length is reached.
