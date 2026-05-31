@@ -1,4 +1,19 @@
 # GPT-2 From Scratch using PyTorch
+# Inference Results
+
+## Text Generation
+
+<p align="center">
+  <img src="results/crop_1.gif" width="400">
+</p>
+
+<p align="center">
+  <img src="results/crop_2.gif" width="400">
+</p>
+
+The GIF demonstrates autoregressive text generation where the model predicts one token at a time and appends it back to the sequence until the desired context length is reached.
+
+---
 
 # Google Colab
 
@@ -42,21 +57,6 @@ The project covers:
 
 ---
 
-# Inference Results
-
-## Text Generation
-
-<p align="center">
-  <img src="results/crop_1.gif" width="400">
-</p>
-
-<p align="center">
-  <img src="results/crop_2.gif" width="400">
-</p>
-
-The GIF demonstrates autoregressive text generation where the model predicts one token at a time and appends it back to the sequence until the desired context length is reached.
-
----
 
 # Theory
 
