@@ -27,7 +27,7 @@ The GIF demonstrates autoregressive text generation where the model predicts one
 
 ---
 
-# Trained Model
+# Model [.pth file]
 
 📦 https://drive.google.com/file/d/1ScCcjXMtQ3ATRO6C_gRb3Hxg-tziGfxd/view?usp=drive_link
 
@@ -334,6 +334,12 @@ All other tokens are masked out.
 Sampling is then performed only among the top-K candidates.
 
 This improves generation quality and reduces garbage outputs.
+
+---
+
+# GPU
+
+* A100 GPU Rented from the Jarvis Labs AI
 
 ---
 
